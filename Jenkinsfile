@@ -2,22 +2,12 @@ pipeline {
     agent any
 
     stages {
-        stage('Clonar') {
-            steps {
-                echo 'Clonando repositorio...'
-            }
-        }
-
-        stage('Compilar / Verificar') {
+        stage('Build') {
             steps {
                 bat 'dir'
-            }
-        }
-
-        stage('Finalizado') {
-            steps {
-                echo 'Build exitoso'
+                echo 'CI funcionando correctamente'
             }
         }
     }
 }
+
